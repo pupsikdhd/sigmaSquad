@@ -1,0 +1,49 @@
+﻿@page "/Squad/About"
+@page "/About"
+<PageTitle>О Sigma Squad</PageTitle>
+<h3>О Sigma Squad</h3>
+
+
+
+<nav>
+    <label class="checkbox1 main-btn">
+        О нас ↓
+        <input type="checkbox" class="checkbox">
+ 
+        <ul class="list">		
+            <li><p class="text">Sigma Squad создан ‎16‎.‎11‎.‎2023 человеком с ником McLovin</p></li>
+        </ul> 
+    </label>
+</nav>
+<hr/>
+<nav>
+    <label class="checkbox1 main-btn">
+        Философия ↓
+        <input type="checkbox" class="checkbox">
+
+        <ul class="list">
+            <li><p class="text">Суть группы в том, что можно здесь собираются только одыкваные люди, которые шарят за мемы</p></li>
+        </ul>
+    </label>
+</nav>
+<style>
+    .text 
+    {
+        border: none;
+        font-size: 18px;
+    }
+    label 
+    {
+        border: 0.2px solid black;
+        font-size: 24px;
+        cursor: pointer;
+        width: 90%;
+    }
+    ul {list-style: none;}
+    .list {display: none;}
+    .checkbox {display: none;}
+
+    .checkbox:checked ~ .list {
+        display: block;
+    }
+</style>

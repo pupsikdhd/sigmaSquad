@@ -1,0 +1,42 @@
+﻿<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        
+        <a class="navbar-brand" href=""><img rel="icon" class="logo-img" type="image/png" src="favicon.png" />  |   Sigma Squad</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 50 50">
+                    <path d="M 24.962891 1.0546875 A 1.0001 1.0001 0 0 0 24.384766 1.2636719 L 1.3847656 19.210938 A 1.0005659 1.0005659 0 0 0 2.6152344 20.789062 L 4 19.708984 L 4 46 A 1.0001 1.0001 0 0 0 5 47 L 18.832031 47 A 1.0001 1.0001 0 0 0 19.158203 47 L 30.832031 47 A 1.0001 1.0001 0 0 0 31.158203 47 L 45 47 A 1.0001 1.0001 0 0 0 46 46 L 46 19.708984 L 47.384766 20.789062 A 1.0005657 1.0005657 0 1 0 48.615234 19.210938 L 41 13.269531 L 41 6 L 35 6 L 35 8.5859375 L 25.615234 1.2636719 A 1.0001 1.0001 0 0 0 24.962891 1.0546875 z M 25 3.3222656 L 44 18.148438 L 44 45 L 32 45 L 32 26 L 18 26 L 18 45 L 6 45 L 6 18.148438 L 25 3.3222656 z M 37 8 L 39 8 L 39 11.708984 L 37 10.146484 L 37 8 z M 20 28 L 30 28 L 30 45 L 20 45 L 20 28 z"></path>
+                </svg>
+                <span class="bi" aria-hidden="true"></span> Главная
+            </NavLink>
+        </div>
+                <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/Squad/Rules" Match="NavLinkMatch.All">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 396 511.464"><path fill-rule="nonzero" d="M66.392 0h195.691a9.85 9.85 0 017.86 3.907l123.399 133.496a9.793 9.793 0 012.604 6.666l.054 301.01c0 18.215-7.494 34.803-19.511 46.834-12.071 12.065-28.666 19.551-46.881 19.551H66.392c-18.249 0-34.864-7.473-46.895-19.504C7.48 479.943 0 463.342 0 445.079V66.385c0-18.269 7.473-34.877 19.49-46.894C31.514 7.467 48.129 0 66.392 0zm46.929 237.005c-5.445 0-9.867-4.422-9.867-9.867 0-5.446 4.422-9.868 9.867-9.868h169.358c5.445 0 9.867 4.422 9.867 9.868 0 5.445-4.422 9.867-9.867 9.867H113.321zm0 81.359c-5.445 0-9.867-4.422-9.867-9.867 0-5.446 4.422-9.867 9.867-9.867h160.386c5.445 0 9.867 4.421 9.867 9.867 0 5.445-4.422 9.867-9.867 9.867H113.321zm0 87.117c-5.445 0-9.867-4.422-9.867-9.867 0-5.446 4.422-9.868 9.867-9.868h136.012c5.446 0 9.868 4.422 9.868 9.868 0 5.445-4.422 9.867-9.868 9.867H113.321zM264.884 27.364V99.5c1.16 15.897 6.748 28.429 16.622 36.872 10.016 8.565 24.759 13.346 44.128 13.679l50.631-.041v-2.15L264.884 27.364zm111.381 142.38l-50.787-.04c-24.251-.38-43.24-6.809-56.762-18.372-14.032-11.99-21.919-29.133-23.472-50.442l-.095-1.349V19.735H66.392c-12.817 0-24.482 5.249-32.945 13.712-8.45 8.45-13.712 20.121-13.712 32.938v378.694c0 12.804 5.262 24.468 13.719 32.925 8.463 8.463 20.135 13.726 32.938 13.726h263.216c12.803 0 24.475-5.263 32.945-13.713 8.45-8.47 13.712-20.141 13.712-32.938V169.744z" /></svg>
+                <span class="bi" aria-hidden="true"></span> Правила
+            </NavLink>
+                </div>                
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/Squad/About" Match="NavLinkMatch.All">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 24 24">
+                    <path d="M 12 2 C 10.343 2 9 3.343 9 5 C 9 6.657 10.343 8 12 8 C 13.657 8 15 6.657 15 5 C 15 3.343 13.657 2 12 2 z M 9 10 A 1.0001 1.0001 0 1 0 9 12 L 10 12 L 10 20 L 9 20 A 1.0001 1.0001 0 1 0 9 22 L 15 22 A 1.0001 1.0001 0 1 0 15 20 L 14 20 L 14 11 C 14 10.448 13.552 10 13 10 L 11 10 L 9 10 z"></path>
+                </svg>
+                <span class="bi" aria-hidden="true"></span> О Sigma Squad
+            </NavLink>
+        </div>
+    </nav>
+</div>
+

@@ -1,0 +1,87 @@
+﻿@rendermode RenderMode.InteractiveServer
+@page "/"
+@page "/Squad"
+<PageTitle>Главная</PageTitle>
+<dialog class="alert-dialog">
+    <h1>Игра пройдена</h1>
+    <button onclick="wipe()" class="main-btn">Играть сново</button>
+</dialog>
+
+<p class="ClicksLabel">Клики:</p>
+<button onclick="increment()" class="main-btn">+</button>
+<hr />
+<button onclick="save()" class="main-btn">Сохранить</button>
+<button onclick="wipe()" class="main-btn">Cброс</button>
+<script>
+    var Clicks = getCookie("Clicks");
+    var ClickLabel = document.querySelector(".ClicksLabel");
+    var alertDialog = document.querySelector('.alert-dialog');
+    var ClicksLimit = 1000;
+    if (typeof Clicks === 'undefined') {
+        Clicks = 1;
+    }
+    updateLabel();
+    
+    function wipe()
+    {
+        Clicks = 1;
+        updateLabel();
+        window.location.reload();
+    }
+
+    function increment()
+    {
+        if (typeof Clicks === 'undefined') {
+            Clicks = 1;
+        }
+        if (Clicks >= ClicksLimit) {
+            alertDialog.showModal();
+            return;
+        }
+    
+        Clicks++;
+        updateLabel();
+
+    }
+    window.onbeforeunload = function (e) {
+        save();
+    };
+    function save()
+    {
+        setCookie('Clicks', Clicks, { secure: true, 'max-age': 99999 });
+    }
+    function updateLabel()
+    {
+        ClickLabel.textContent = "Клики:" + Clicks;
+    }
+    
+    function setCookie(name, value, options = {}) {
+
+        options = {
+            path: '/',
+            ...options
+        };
+
+        if (options.expires instanceof Date) {
+            options.expires = options.expires.toUTCString();
+        }
+
+        let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+        for (let optionKey in options) {
+            updatedCookie += "; " + optionKey;
+            let optionValue = options[optionKey];
+            if (optionValue !== true) {
+                updatedCookie += "=" + optionValue;
+            }
+        }
+
+        document.cookie = updatedCookie;
+    }
+    function getCookie(name) {
+        let matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+</script>
